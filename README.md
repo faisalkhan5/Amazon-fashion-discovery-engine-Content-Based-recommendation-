@@ -1,4 +1,4 @@
-# Amazon-fashion-discovery-engine-Content-Based-recommendation-(Minor Project)
+# Amazon-fashion-discovery-engine-Content-Based-recommendation
 
 ## Why care about product recommendations?
 It is estimated that around 35% of the revenues that amazon makes are because of product recommendations. Due to product recommendation bars, as shown above, the user ends up buying a product or two.
