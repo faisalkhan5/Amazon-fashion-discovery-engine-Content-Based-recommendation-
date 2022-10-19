@@ -1,49 +1,45 @@
-# Amazon-fashion-discovery-engine-Content-Based-recommendation
+# Amazon-Fashion-Discovery-Engine
 
-## Why care about product recommendations?
-It is estimated that around 35% of the revenues that amazon makes are because of product recommendations. Due to product recommendation bars, as shown above, the user ends up buying a product or two.
+This is a content based recommendation engine for recommending apparel items or products at [Amazon](https://www.amazon.com), using text and image data retreived from website.
+Suggested text based recommendations using Bag of Words (BoW), Word2Vec and TF-IDF techniques.
+Made image based recommendations using Convolutional Neural Network(CNN).
 
-- Amazon internally uses two types of recommendation systems:
-- 1) Content-Based Recommendation: When we search about polka dot shirts, it uses text and images to recommend similar products.
-- 2) Collaborative filtering based Recommendation: 
-Imagine, User U1 browsed through products i1,i2,i3
-User U2 browsed through i1,i3,i4
-Then I can recommend User U3, the product i3 when he is on page i1.
-So, this is called a collaborative filtering-based recommendation. Unfortunately, we don't have this data.
+## Table of contents
+* [General info](#general-info)
+* [Setup](#setup)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
-- So, in this case study, I used content-based recommendations.
+## General info
 
-## Overview of the data
-- Number of data points/products: 183138
-- Number of features/variables: 19
-- I used only 6 features out of these 19 features in this workshop.
-- I have intentionally not used description as it is lengthy and takes longer time to process.
+Amazon, each year makes additional 30% revenue through product recommendations, a value greater than $40 Billion.
 
-## Data Cleaning & Understanding
-This is extremely important step in machine learning which is often overlooked. The better we understand our data, the more better models we can build.
-At the end of data cleaning and preprocessing steps, we already de-duped our data and removed stop words. I was left with 16K products as my dataset.
+Using this content based recomendation, we get a glimpse to the recommendation systems at Amazon, constantly recommending the right products to customers.
 
-## Text Based Product Similarity
-We worked on :
-- Bag of words based product similarity model.
-- TF-IDF based product similarity model.
-- IDF based product similarity model.
-- Word2Vec based product similarity model.
-- Average Word2Vec based product similarity model.
-- TF-IDF Weighted Word2Vec based product similarity model.
-- IDF Weighed Word2Vec based product similarity model.
-- Weighed Similarity using brand and color based product similarity model.
+We made use of text and image data of products, web scraped for the website using the Amazon API.
 
-- So , we worked on multiple techniques. But, How does real world solution/system built ?
-Most companies use multiple techniques or combine multiple techniques and carry out A|B testing to measure the goodness of the models. Of course some business rules are considered.
+Brand name, title, description, price are one of the major features for extraction of data for recommendation engine.
 
-## Deep Learning based Visual Product Similarity
-- Here, I used Convolutional neural networks like VGG-16 to convert my image into dense vector and applied euclidean distance on top of it to bring out the similarity and recommend products. Here VGG-16 converted each image into a 25,088 dimensional dense vector. I got some really interesting results using deep learning.
+## Setup
 
-## Conclusion
-- Recommender system can help the user to find the right product.
-- It increases the user engagement.
-- It helps to make the content more personalized and increases the sales of the company.
+* Download the Jupyter Notebooks on your computer.
+* Download training, testing, and other important data using link provided in [this](https://github.com/pranshu1921/Amazon-Fashion-Discovery-Engine/blob/master/AppliedAIWorkshop.ipynb) file.
 
-## Author
-Faisal khan
+### Install the requirements
+ 
+* Install the requirements using `pip install -r requirements.txt`.
+    * Make sure you use Python 3.
+    
+* Run the jupyter notebooks in the following order - 
+  1. AppliedAIWorkshop.ipynb
+  2. image_similarity_cnn.ipynb
+
+## Status
+Project status: **Finished**
+
+## Inspiration
+This project was part of one of the Applied Machine Learning Case Studies provided by AppliedAIcourse.
+
+## Contact
+Feel free to contact me, send a mail to **pranshu1921@gmail.com**
